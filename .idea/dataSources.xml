@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1474210115">
+    <data-source source="LOCAL" name="PostgreSQL - railsbarb@localhost" uuid="d18e3847-13b3-497a-b064-e2d9c14e35d1">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/railsbarb</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

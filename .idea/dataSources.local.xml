@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - railsbarb@localhost" uuid="d18e3847-13b3-497a-b064-e2d9c14e35d1">
+      <secret-storage>master_key</secret-storage>
+      <user-name>pguser</user-name>
+      <schema-pattern>railsbarb.*</schema-pattern>
+      <default-schemas>railsbarb.*</default-schemas>
+    </data-source>
+  </component>
+</project>
