@@ -1,10 +1,16 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article, only: [:edit, :update, :destroy]
+  before_action :get_article, only: [:show]
 
   # GET /articles
   # GET /articles.json
   def index
     @articles = Article.all
+
+    respond_to do |format|
+      format.rss { render :layout => false }
+    end
+
   end
 
   # GET /articles/1
@@ -63,8 +69,14 @@ class ArticlesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+
     def set_article
       @article = Article.find(params[:id])
+    end
+
+    def get_article
+      @article = Article.find_by(name: params[:name])
+#      @article = Article.find_by_name(params[:name])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

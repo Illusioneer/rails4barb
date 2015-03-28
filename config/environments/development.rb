@@ -6,6 +6,8 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  config.cache_store = :dalli_store, 'localhost', { :namespace => 'RAILSBARB', :expires_in => 1.day, :compress => true }
+
   # Do not eager load code on boot.
   config.eager_load = false
 

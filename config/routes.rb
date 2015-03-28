@@ -1,15 +1,9 @@
 Rails.application.routes.draw do
   resources :articles
 
-  get 'content/index'
+  resources :content
 
-  get 'content/create'
-
-  get 'content/update'
-
-  get 'content/edit'
-
-  get 'content/destroy'
+  match '/autopath/:author/:name/' => 'articles#show', via: :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -18,6 +12,15 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
+#  Article.columns.each {|column|
+#    match "/autopath/:"+column.name => "articles#show", via: :get
+#  }
+
+  # Route path, sequential array of fields ['content',':name',':date','wahtever']
+  #
+  #
+  #
+
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
